@@ -42,10 +42,10 @@ class Pays
     // Méthode pour lister les équipes
     public function listerEquipe()
     {
-        echo "<b>" . $this->getNom() . " :</b><br>";
+        echo "<b>" . $this->getNom() . " :</b><br><br>";
         foreach ($this->equipes as $equipe)
         {
-            echo $equipe->getNom() . "<br>";
+            echo "• ". $equipe->getNom() . "<br>";
         }
     }
 }

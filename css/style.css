@@ -1,0 +1,55 @@
+* {
+    background-color: rgba(204, 204, 204, 0.904);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    margin-top: 2em;
+}
+
+.cards {
+    color: white;
+}
+
+b {
+    background-color: inherit;
+    font-size: 1.3em;
+}
+
+.pays {
+    padding: 1em 0;
+    width: 15em;
+    height: 7em;
+    text-align: center;
+    background-color: rgba(255, 6, 6, 0.747);
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4); 
+    font-size: 0.9em;
+}
+
+.equipe {
+    padding: 1em 0;
+    width: 15em;
+    height: 7em;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.808);
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4); 
+    font-size: 0.9em;
+}
+
+.joueur {
+    padding: 1em 0;
+    width: 15em;
+    height: 7em;
+    text-align: center;
+    background-color: rgba(0, 190, 0, 0.836);
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4); 
+    font-size: 0.9em;
+}

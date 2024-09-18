@@ -40,13 +40,34 @@ $neymar = new Joueur("Neymar", "Junior", "05-02-1992", $france);
 $ronaldo = new Joueur("Cristiano", "Ronaldo", "05-02-1985", $espagne);
 $mbappe = new Joueur("Kylian", "Mbappé", "20-12-1998", $france);
 
-$contratMessi = new Contrat($messi, $psg, "2021");
-$contratNeymar = new Contrat($neymar, $psg, "2024");
-$contratRonaldo = new Contrat($ronaldo, $manchester, "2018");
-$contratMbappe = new Contrat($mbappe, $psg, "2023");
-
-echo $france->listerEquipe() . "<br>";
-echo $psg->listerJoueur() . "<br>";
-echo $ronaldo->listerEquipe();
+$contratMessi = new Contrat($messi, $psg, "01-01-2021");
+$contratNeymar = new Contrat($neymar, $psg, "01-01-2024");
+$contratRonaldo = new Contrat($ronaldo, $manchester, "01-01-2018");
+$contratMbappe = new Contrat($mbappe, $psg, "01-01-2023");
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="cards">
+            <div class="pays">
+                <?= $france->listerEquipe() ?>
+            </div>
+            <div class="equipe">
+                <?= $psg->listerJoueur() ?>
+            </div>
+            <div class="joueur">
+                <?= $ronaldo->listerEquipe() ?>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,4 +1,4 @@
-b<?php 
+<?php 
 
 require_once 'Pays.php';
 
@@ -51,11 +51,11 @@ class Equipe
     // Méthode lister contrats de l'équipe
     public function listerJoueur()
     {
-        echo "<b>" . $this->getNom() . " :</b><br>";
+        echo "<b>" . $this->getNom() . " :</b><br><br>";
         foreach ($this->contrats as $contrat)
         {
             $joueur = $contrat->getJoueur();
-            echo $joueur->getPrenom() . " " . $joueur->getNom() . " " . "(" . $joueur->ageJoueur() ." ans)<br>";
+            echo "• " . $joueur->getPrenom() . " " . $joueur->getNom() . " " . "(" . $joueur->ageJoueur() ." ans)<br>";
         }
     }
 }

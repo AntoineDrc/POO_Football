@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 require_once 'Pays.php';
 
-class Joueur 
+class Joueur
 {
     private string $prenom;
     private string $nom;
@@ -23,50 +23,50 @@ class Joueur
     // Getters / setters
     public function getPrenom()
     {
-            return $this->prenom;
+        return $this->prenom;
     }
 
     public function setPrenom($prenom)
     {
-            $this->prenom = $prenom;
+        $this->prenom = $prenom;
 
-            return $this;
+        return $this;
     }
 
-    public function getNom()
+    public function getNom(): string
     {
-            return $this->nom;
+        return $this->nom;
     }
 
     public function setNom($nom)
     {
-            $this->nom = $nom;
+        $this->nom = $nom;
 
-            return $this;
+        return $this;
     }
 
     public function getDateNaissance()
     {
-            return $this->dateNaissance;
+        return $this->dateNaissance;
     }
 
     public function setDateNaissance($dateNaissance)
     {
-            $this->dateNaissance = $dateNaissance;
+        $this->dateNaissance = $dateNaissance;
 
-            return $this;
+        return $this;
     }
 
     public function getPays()
     {
-            return $this->pays;
+        return $this->pays;
     }
 
     public function setPays($pays)
     {
-            $this->pays = $pays;
+        $this->pays = $pays;
 
-            return $this;
+        return $this;
     }
 
     // Méthode ajout contrat
@@ -85,14 +85,9 @@ class Joueur
     // Méthode lister les équipes du joueur
     public function listerEquipe()
     {
-        foreach ($this->contrats as $contrat)
-        {
+        foreach ($this->contrats as $contrat) {
             $joueur = $contrat->getJoueur();
-            echo "<b>" . $joueur->getPrenom() . " " . $joueur->getNom() . "</b><br>" . $this->pays->getNom() . " - " . $joueur->ageJoueur() . " ans (" . $contrat->getEquipe()->getNom() . " " .  $contrat->getAnneesaison() . ")<br>";
+            echo "<b>" . $joueur->getPrenom() . " " . $joueur->getNom() . "</b><br><br>• " . $this->pays->getNom() . " - " . $joueur->ageJoueur() . " ans (" . $contrat->getEquipe()->getNom() . " " .  $contrat->getAnneesaison() . ")<br>";
         }
     }
 }
-
-
-
-?>
