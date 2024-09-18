@@ -73,6 +73,13 @@ class Joueur
     {
         $this->contrats[] = $contrat;
     }
+
+    // Méthode calcul $age joueur
+    public function ageJoueur()
+    {
+        $diff = $this->dateNaissance->diff(new DateTime());
+        return $diff->y;
+    }
 }
 
 

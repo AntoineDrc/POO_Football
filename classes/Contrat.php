@@ -1,9 +1,5 @@
 <?php 
 
-require_once 'Joueur';
-require_once 'Equipe';
-
-
 class Contrat 
 {
     private Joueur $joueur;
@@ -14,7 +10,9 @@ class Contrat
     public function __construct(Joueur $joueur, Equipe $equipe, string $anneeSaison)
     {
         $this->joueur = $joueur;
+        $joueur->ajouterContrat($this);
         $this->equipe = $equipe;
+        $equipe->ajouterContrat($this);
         $this->anneeSaison = new DateTime($anneeSaison);
     }
 

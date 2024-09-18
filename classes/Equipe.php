@@ -1,4 +1,4 @@
-<?php 
+b<?php 
 
 require_once 'Pays.php';
 
@@ -13,6 +13,8 @@ class Equipe
     {
         $this->nom = $nom;
         $this->pays = $pays;
+        $pays->ajouterEquipe($this);
+        $this->contrats = [];
     }
 
     // Getters / setters
@@ -38,6 +40,23 @@ class Equipe
             $this->pays = $pays;
 
             return $this;
+    }
+
+    // Méthode pour ajouter contrat
+    public function ajouterContrat($contrat)
+    {
+        $this->contrats[] = $contrat;
+    }
+
+    // Méthode lister contrats de l'équipe
+    public function listerJoueur()
+    {
+        echo "<b>Les joueurs sous contrat avec l'équipe " . $this->getNom() . " :</b><br>";
+        foreach ($this->contrats as $contrat)
+        {
+            $joueur = $contrat->getJoueur();
+            echo $joueur->getPrenom() . " " . $joueur->getNom() . " " . "(" . $joueur->ageJoueur() ." ans)<br>";
+        }
     }
 }
 

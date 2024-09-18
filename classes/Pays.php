@@ -11,6 +11,7 @@ class Pays
     public function __construct(string $nom)
     {   
         $this->nom = $nom;
+        $this->equipes = [];
     }
 
     // Getters / setters
@@ -36,6 +37,16 @@ class Pays
     public function ajouterJoueur(Joueur $joueur)
     {
         $this->joueurs[] = $joueur;
+    }
+
+    // Méthode pour lister les équipes
+    public function listerEquipe()
+    {
+        echo "<b>Equipes de la " . $this->getNom() . " :</b><br>";
+        foreach ($this->equipes as $equipe)
+        {
+            echo $equipe->getNom() . "<br>";
+        }
     }
 }
 

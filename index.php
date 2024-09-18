@@ -13,3 +13,26 @@ Concevez le projet en POO de façon à :
 (30 ans), Lionel Messi (35 ans), Kylian Mbappé (23 ans)
 - lister toutes les équipes d'un joueur (Ex : Lionel Messi (FC Barcelone 2004, PSG 2021))
 </p>
+
+<?php 
+
+spl_autoload_register(function ($class_name)
+{
+    require_once 'classes/' . $class_name . ".php";
+});
+
+// Instanciation des objets
+$france = new Pays("France");
+
+
+$psg = new Equipe("PSG", $france);
+$rcs = new Equipe("RCStrasbourg", $france);
+
+$messi = new Joueur("Lionel", "Messi", "24-06-1987", $france);
+
+$contratMessi = new Contrat($messi, $psg, "2021");
+
+echo $france->listerEquipe() . "<br>";
+echo $psg->listerJoueur();
+
+?>
