@@ -88,7 +88,7 @@ class Joueur
         foreach ($this->contrats as $contrat)
         {
             $joueur = $contrat->getJoueur();
-            echo $joueur->getPrenom() . " " . $joueur->getNom() . " (" . $contrat->getEquipe()->getNom() . " " .  $contrat->getAnneesaison() . ")<br>";
+            echo "<b>" . $joueur->getPrenom() . " " . $joueur->getNom() . "</b><br>" . $this->pays->getNom() . " - " . $joueur->ageJoueur() . " ans (" . $contrat->getEquipe()->getNom() . " " .  $contrat->getAnneesaison() . ")<br>";
         }
     }
 }

@@ -51,11 +51,11 @@ class Equipe
     // Méthode lister contrats de l'équipe
     public function listerJoueur()
     {
-        echo "<b>Les joueurs sous contrat avec l'équipe " . $this->getNom() . " :</b><br>";
+        echo "<b>" . $this->getNom() . " :</b><br>";
         foreach ($this->contrats as $contrat)
         {
             $joueur = $contrat->getJoueur();
-            echo $joueur->getPrenom() . " " . $joueur->getNom() . " " . "(" . $joueur->ageJoueur() ." ans)<br><br>";
+            echo $joueur->getPrenom() . " " . $joueur->getNom() . " " . "(" . $joueur->ageJoueur() ." ans)<br>";
         }
     }
 }

@@ -23,17 +23,30 @@ spl_autoload_register(function ($class_name)
 
 // Instanciation des objets
 $france = new Pays("France");
+$espagne = new Pays("Espagne");
+$angleterre = new Pays("Angleterre");
+$italie = new Pays("Italie");
 
 
 $psg = new Equipe("PSG", $france);
 $rcs = new Equipe("RCStrasbourg", $france);
+$real = new Equipe("Real Madrid", $espagne);
+$fcbarcelone = new Equipe("FC Barcelone", $espagne);
+$manchester = new Equipe("Manchester United", $angleterre);
+$juventus = new Equipe("Juventus", $italie);
 
 $messi = new Joueur("Lionel", "Messi", "24-06-1987", $france);
+$neymar = new Joueur("Neymar", "Junior", "05-02-1992", $france);
+$ronaldo = new Joueur("Cristiano", "Ronaldo", "05-02-1985", $espagne);
+$mbappe = new Joueur("Kylian", "Mbappé", "20-12-1998", $france);
 
 $contratMessi = new Contrat($messi, $psg, "2021");
+$contratNeymar = new Contrat($neymar, $psg, "2024");
+$contratRonaldo = new Contrat($ronaldo, $manchester, "2018");
+$contratMbappe = new Contrat($mbappe, $psg, "2023");
 
 echo $france->listerEquipe() . "<br>";
-echo $psg->listerJoueur();
-echo $messi->listerEquipe();
+echo $psg->listerJoueur() . "<br>";
+echo $ronaldo->listerEquipe();
 
 ?>
