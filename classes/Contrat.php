@@ -43,7 +43,7 @@ class Contrat
 
     public function getAnneeSaison()
     {
-            return $this->anneeSaison;
+            return $this->anneeSaison->format("Y");
     }
 
     public function setAnneeSaison($anneeSaison)

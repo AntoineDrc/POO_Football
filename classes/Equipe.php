@@ -55,7 +55,7 @@ class Equipe
         foreach ($this->contrats as $contrat)
         {
             $joueur = $contrat->getJoueur();
-            echo $joueur->getPrenom() . " " . $joueur->getNom() . " " . "(" . $joueur->ageJoueur() ." ans)<br>";
+            echo $joueur->getPrenom() . " " . $joueur->getNom() . " " . "(" . $joueur->ageJoueur() ." ans)<br><br>";
         }
     }
 }

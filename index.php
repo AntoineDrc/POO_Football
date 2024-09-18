@@ -34,5 +34,6 @@ $contratMessi = new Contrat($messi, $psg, "2021");
 
 echo $france->listerEquipe() . "<br>";
 echo $psg->listerJoueur();
+echo $messi->listerEquipe();
 
 ?>

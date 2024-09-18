@@ -17,6 +17,7 @@ class Joueur
         $this->nom = $nom;
         $this->dateNaissance = new DateTime($dateNaissance);
         $this->pays = $pays;
+        $this->contrats = [];
     }
 
     // Getters / setters
@@ -79,6 +80,16 @@ class Joueur
     {
         $diff = $this->dateNaissance->diff(new DateTime());
         return $diff->y;
+    }
+
+    // Méthode lister les équipes du joueur
+    public function listerEquipe()
+    {
+        foreach ($this->contrats as $contrat)
+        {
+            $joueur = $contrat->getJoueur();
+            echo $joueur->getPrenom() . " " . $joueur->getNom() . " (" . $contrat->getEquipe()->getNom() . " " .  $contrat->getAnneesaison() . ")<br>";
+        }
     }
 }
 
